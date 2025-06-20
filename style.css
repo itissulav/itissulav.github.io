@@ -159,6 +159,7 @@ section{
 }
 .section-container{
     display: flex;
+    margin-top: 5rem;
     margin-top: 4rem;
 }
 
@@ -303,7 +304,7 @@ section{
 
 .section-container p{
     text-align: justify;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .section-heading{
