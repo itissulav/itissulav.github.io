@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulav Paudel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Sulav Paudel</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id = "hamburger-nav">
+        <div class="logo">Sulav Paudel</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id = "profile" class="profile-section">
+        <div class="profile-container">
+            <div class="section__text">
+                <p class="section__text__p1">Hi!</p>
+                <h1 class="title"> I AM SULAV PAUDEL</h1>
+                <p class="section__text__p2">CS Undergrad, Aspiring Developer, Teacher</p>
+                <p class = "short-bio"> I'm a Computer Science undergraduate who loves solving real-world problems through code. From mentoring peers to building creative, efficient projects, I enjoy taking on diverse roles. With a strong background in public speaking and debate, I value clarity, impact, and continuous growth.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/sulav-paudel-cv.pdf')"> Download CV</button>
+                    <button class="btn btn-color-1" onclick="location.href = './#contact'"> Contact Info</button>
+                </div>
+                <div id = 'socials-container'>
+                    <div class="linkedin">
+                        <a href="https://www.linkedin.com/in/itissulav/">Linkedin</a>
+                    </div>
+                    <div class="github">
+                        <a href="'https://github.com/itissulav'">Github</a>
+                    </div>   
+                </div>
+            </div>
+            <div class="section__pic-container">
+                <img src="./assets/SulavPaudel.png" alt=" Sulav Paudel profile picture">
+            </div>
+        </div>
+    </section>
+
+    <section id ="about">
+        <h1 class="section_title">About me</h1>
+        <div class="section-container">
+            <div class="about-details-container">
+                <p>
+                    Hi, I’m Sulav Paudel, a Computer Science undergraduate who is passionate about creating meaningful and practical solutions through technology. I’m driven by curiosity and a desire to bridge the gap between creativity and logic. From developing academic projects to mentoring peers in research and communication, I enjoy taking on roles that challenge me to think critically and grow continuously.
+                </p>
+                <p>
+                    My background in public speaking and debate has shaped me into a confident communicator who values clarity, structure, and impact. I believe that strong communication is just as important as strong code, especially when working in teams or presenting ideas. Whether it’s solving technical problems, leading discussions, or exploring how tech can improve lives, I bring energy, empathy, and a willingness to learn to everything I do.
+                </p>
+            </div>
+            <div class="profile-section__pic-container">
+                <img src="./assets/about-section-img-1.png" alt="About me picture 1">
+                <img src="./assets/about-section-img-2.png" alt="About me picture 2">
+            </div>
+        </div>
+    </section>
+    <h1 class="section_title">Experience</h1>
+    <section id = "experience">
+        <div id = "teaching">
+            <h1 class="section-heading">Teaching Experience</h1>
+            <div class="experience-container">
+
+
+                <div class="card experience-card">
+                    <h1 class="experience-title">Mero Sikshya</h1>
+                    <img src="./assets/merosiksha.jpg" alt="merosiksha" class="experience-img">
+                    <h1 class="experience-title">Tutor</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Contract</p>
+                        <p class="experience-paragraph">Feb 2022 - Sep 2023</p>
+                    </div>
+                    <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
+                    <p class="experience-paragraph"> <span class="experience-paragraph-bold">Courses: </span>Mathematics (Calculus I II, Probability, Statistics, Mechanics)</p>
+                    <p class="experience-paragraph">Computer Science (Python, algorithms, data structures)</p>
+                    <p class="experience-paragraph">Physics (Particle Physics, Quantum Mechanics, Nuclear Physics).</p>
+                    <button class="learn-more" onclick="window.open('https://merosiksha.com/', '_blank')">Learn More</button>
+                </div>
+
+
+                <div class="card experience-card">
+                    <h1 class="experience-title">Debate Network Nepal</h1>
+                    <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+                    <h1 class="experience-title">Debate Trainer</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Freelance</p>
+                        <p class="experience-paragraph">Apr 2023 - Present</p>
+                    </div>
+                    <p class="experience-paragraph">Taught debate to 100+ students across 4+ schools</p>
+                    <p class="experience-paragraph"> <span class="experience-paragraph-bold">Courses: </span>Debate Format (WSDC, BP, AP)</p>
+                    <p class="experience-paragraph">Critical Thinking, Persuasion, Art of Argumentation</p>
+                    <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+                </div>
+
+                <div class="card experience-card">
+                    <h1 class="experience-title">Incubate Nepal</h1>
+                    <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
+                    <h1 class="experience-title">Peer Mentor</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Seasonal</p>
+                        <p class="experience-paragraph">Jun 2023 - Aug 2023</p>
+                    </div>
+                    <p class="experience-paragraph">Mentored a group of 4 students on research methodologies, interview techniques, and project development.</p>
+                    <p class="experience-paragraph">Facilitated communication between mentees and the organizing committee to ensure smooth collaboration.</p>
+                    <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
+                </div>
+
+            </div>
+        <div id = "management-technical">
+            <h1 class="section-heading">Technical Experience</h1>
+
+
+                <div class="experience-container">
+                    <div class="card experience-card">
+                        <h1 class="experience-title">Debate Network Nepal</h1>
+                        <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+                        <h1 class="experience-title">IT Officer</h1>
+                        <div class="date-container">
+                            <p class="experience-paragraph">Full Time</p>
+                            <p class="experience-paragraph">Dec 2022 - Jan 2023</p>
+                        </div>
+                        <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
+                        <p class="experience-paragraph">Managed the company website with admin privilege updates.</p>
+                        <p class="experience-paragraph">Handled the Social media platforms including designing and creating original posts.</p>
+                        <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+                    </div>
+
+
+                    <div class="card experience-card">
+                        <h1 class="experience-title">Incubate Nepal</h1>
+                        <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
+                        <h1 class="experience-title">Student Researcher</h1>
+                        <div class="date-container">
+                            <p class="experience-paragraph">Seasonal</p>
+                            <p class="experience-paragraph">Aug 2022 - Nov 2022</p>
+                        </div>
+                        <p class="experience-paragraph">Led research and development, built the database, designed the user interface, and implemented the interactive map.</p>
+                        <p class="experience-paragraph">Focused on identifying overlooked heritage sites and using technology to support cultural preservation.</p>
+                        <p class="experience-paragraph"> <span class="experience-paragraph-bold">Project: </span>Samrakshana</p>
+                        <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
+                    </div>
+
+
+                    <div class="card experience-card">
+                        <h1 class="experience-title">Debate Network Nepal</h1>
+                        <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+                        <h1 class="experience-title">Deputy Head of Operations</h1>
+                        <div class="date-container">
+                            <p class="experience-paragraph">Full Time</p>
+                            <p class="experience-paragraph">Jan 2023 - Apr 2023</p>
+                        </div>
+                        <p class="experience-paragraph">Organized and managed large-scale debate tournaments</p>
+                        <p class="experience-paragraph">Handled logistics, scheduling, and sponsorship outreach</p>
+                        <p class="experience-paragraph">Built partnerships for community sustainability</p>
+                        <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+                    </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h1 class="section_title">Skills</h1>
+        <div class="skill-container">
+
+
+            <div class="skill-card">
+                <img src="./assets/python.webp" alt="python">
+                <h1 class="skill-title">Python</h1>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/java.webp" alt="java">
+                <h1 class="skill-title">Java</h1>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/python.webp" alt="python">
+                <h1 class="skill-title">Python</h1>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/python.webp" alt="python">
+                <h1 class="skill-title">Python</h1>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/python.webp" alt="python">
+                <h1 class="skill-title">Python</h1>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/python.webp" alt="python">
+                <h1 class="skill-title">Python</h1>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id = 'project'>
+        <p class = "project-title"> Browse my Recent</p>
+        <p class="section_title">Projects</p>
+
+        <div class="project-container">
+
+            <div class="card project-card">
+                <p class="experience-title">Shaadi Mitra</p>
+                <img src="./assets/shaadimitra.png" alt="shaadimitra" class="project-img">
+                <p class="experience-paragraph">Shaadi Mitra is a college project: a modern matchmaking web app</p>
+                <p class="experience-paragraph">Combines traditional matchmaking with a swipe-based UI.</p>
+                <p class="experience-paragraph">Built with a clean frontend and structured backend.</p>
+
+                <p class="experience-paragraph"> <span class="experience-paragraph-bold">Tools: </span> HTML, CSS, JAVA, mySQL, JSP, Eclipse, RESTAPI</p>
+                <button class="learn-more" onclick="window.open('https://github.com/itissulav/Shaadi-Mitra', '_blank')">Learn More</button>
+            </div>
+
+            <div class="card project-card">
+                <p class="experience-title">Samrakshana</p>
+                <img src="./assets/Samrakshana.png" alt="Samrakshana" class="project-img">
+                <p class="experience-paragraph-bold">Responsibilities</p>
+                <p class="experience-paragraph">Led frontend development and database design.</p>
+                <p class="experience-paragraph">Integrated interactive map features using Leaflet.js</p>
+                <p class="experience-paragraph">Conducted research on heritage sites and organized content for public accessibility.</p>
+
+                <p class="experience-paragraph"> <span class="experience-paragraph-bold">Tools: </span> HTML, CSS, JavaScript, Leaflet.js, Firebase</p>
+                <button class="learn-more" onclick="window.open('https://github.com/suyoscar11/Samrakshana', '_blank')">Learn More</button>
+            </div>
+
+            <div class="card project-card">
+                <p class="experience-title">Real-Time Emotion Music Bot</p>
+                <img src="./assets/realtimemusicbot.png" alt="shaadimitra" class="project-img">
+                <p class="experience-paragraph">An AI-powered Python app that detects user emotions from text, extracts context keywords, and recommends songs by integrating Genius and Spotify APIs.</p>
+                <p class="experience-paragraph">Trained a model using 300,000 data fo Natural Language Processing.</p>
+
+                <p class="experience-paragraph"> <span class="experience-paragraph-bold">Tools: </span> Transformers, keyBERT, NLTK, SpotifyAPI, Spotipy, scikit-learn</p>
+                <button class="learn-more" onclick="window.open('https://github.com/itissulav/Real-Time-Emotion-Music-Bot', '_blank')">Learn More</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <p class="section_title">Contact me</p>
+        <div class="contact-container">
+            <div class="contact_card">
+                <img src="./assets/email.jpg" alt="email" class="icon contact-icon">
+                <p><a href="mailto:itissulav8@gmail.com">itissulav8@gmail.com</a></p>
+            </div>
+
+            <div class="contact_card">
+                <img src="./assets/linkedin icon.webp" alt="linkedin" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/itissulav/">itissulav</a></p>
+            </div>
+            
+            <div class="contact_card">
+                <img src="./assets/call icon.png" alt="call" class="icon contact-icon">
+                <p>+977 9849000056</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
