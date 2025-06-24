@@ -40,6 +40,7 @@ nav {
     height: 17vh;
     padding-left: 5%;
     padding-right: 5%;
+    margin-bottom: 3rem;
 }
 
 .nav-links{
@@ -154,7 +155,7 @@ a:hover{
 /*SECTION*/
 
 section{
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-bottom: 5rem;
 }
 .section-container{
@@ -169,8 +170,7 @@ section{
     justify-content: space-between;
     padding-left: 5%;
     padding-right: 5%;
-    align-items: center;
-    gap: 20%;
+    margin-top: 0;
 }
 
 
@@ -190,7 +190,7 @@ section{
 
 .section__pic-container, .profile-section__pic-container img{
     margin-top: 0;
-    height: 80vh;
+    height: 70vh;
 }
 
 .section__text__p1{
@@ -245,15 +245,17 @@ section{
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-}
-
-.linkedin a{
     color: white;
     font-weight: 700;
     vertical-align: middle;
 }
 
-
+.linkedin:hover{
+    background: white;
+    color: black;
+    border: 1px black solid;
+    transition: 300ms ease-in-out;
+}
 
 .github{
     display: flex;
@@ -266,25 +268,80 @@ section{
     height: 2rem;
     width: 37%;
     font-weight: 700;
+    color: black;
+    vertical-align: middle;
+    transition: 300ms ease-in-out;
 }
 
 .github:hover{
     background: black;
-}
-
-.github a:hover{
     color: white;
-    text-decoration: none;
 }
 
-.linkedin:hover{
-    background: white;
-    border: 2px black solid;
+.about-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.linkedin a:hover{
-    color: black;
-    text-decoration: none;
+.about-toggle {
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-toggle.active,
+.about-toggle:hover {
+  background-color: black;
+  color: white;
+}
+
+.about-split-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 5%;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-side {
+  display: none;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  background: #fefefe;
+  border-radius: 12px;
+}
+
+.about-side.active {
+  display: block;
+}
+
+.about-code-editor pre {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.about-notebook {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-notebook h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .section_title{
@@ -320,9 +377,14 @@ section{
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10%;
     margin-bottom: 5rem;
+}
+
+.experience-container {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 .card{
@@ -331,7 +393,7 @@ section{
     flex-direction: column;
     justify-content: space-between;
     width: 20rem;
-    margin-top: 5rem;
+    margin-top: 1rem;
     box-shadow: 0px 0px 70px 8px rgba(0, 0, 0, 0.30);
 }
 
@@ -355,6 +417,10 @@ section{
 .date-container{
     display: flex;
     justify-content: space-between;
+}
+
+.date-container p{
+    width: fit-content;
 }
 
 .experience-paragraph{
@@ -388,6 +454,39 @@ section{
     display: flex;
     justify-content: space-between;
 }
+
+
+.experience-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.experience-toggle {
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.experience-toggle.active,
+.experience-toggle:hover {
+  background-color: black;
+  color: white;
+}
+
+.experience-tab {
+  display: none;
+}
+
+.experience-tab.active {
+  display: block;
+}
+
+
 #skills{
     margin-bottom: 5rem;
 }
@@ -444,14 +543,16 @@ section{
     text-align: center;
     margin-bottom: 0.7rem;
 }
+#contact p{
+    margin-bottom: 2rem;
+}
 
 .contact-container{
     margin-top: 3rem;
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: space-evenly;
 }
 .contact_card{
     display: flex;
@@ -463,6 +564,6 @@ section{
 }
 .icon{
     width: 2rem;
-
+    height: 2rem;
 }
 

@@ -49,12 +49,8 @@
                     <button class="btn btn-color-1" onclick="location.href = './#contact'"> Contact Info</button>
                 </div>
                 <div id = 'socials-container'>
-                    <div class="linkedin">
-                        <a href="https://www.linkedin.com/in/itissulav/">Linkedin</a>
-                    </div>
-                    <div class="github">
-                        <a href="'https://github.com/itissulav'">Github</a>
-                    </div>   
+                    <button class="linkedin" onclick="window.open('https://www.linkedin.com/in/itissulav/', '_blank')">Linkedin</button>
+                    <button class="github" onclick="window.open('https://github.com/itissulav', '_blank')">GitHub</button>
                 </div>
             </div>
             <div class="section__pic-container">
@@ -63,123 +59,165 @@
         </div>
     </section>
 
-    <section id ="about">
-        <h1 class="section_title">About me</h1>
-        <div class="section-container">
-            <div class="about-details-container">
-                <p>
-                    Hi, I’m Sulav Paudel, a Computer Science undergraduate who is passionate about creating meaningful and practical solutions through technology. I’m driven by curiosity and a desire to bridge the gap between creativity and logic. From developing academic projects to mentoring peers in research and communication, I enjoy taking on roles that challenge me to think critically and grow continuously.
-                </p>
-                <p>
-                    My background in public speaking and debate has shaped me into a confident communicator who values clarity, structure, and impact. I believe that strong communication is just as important as strong code, especially when working in teams or presenting ideas. Whether it’s solving technical problems, leading discussions, or exploring how tech can improve lives, I bring energy, empathy, and a willingness to learn to everything I do.
-                </p>
+    <section id="about">
+        <h1 class="section_title">About Me</h1>
+        <div class="about-toggle-buttons">
+        <button class="about-toggle active" onclick="toggleAbout('developer')">Developer Side</button>
+        <button class="about-toggle" onclick="toggleAbout('communicator')">Communicator Side</button>
+        </div>
+
+        <div class="about-split-container">
+        <div id="developer-content" class="about-side active">
+            <div class="about-code-editor">
+                <pre><code>// Developer Side
+                class SulavPaudel {
+                constructor() {
+                    this.role = "CS Undergraduate";
+                    this.interests = ["Problem Solving", "Real-World Applications", "Projects"];
+                }
+
+                build() {
+                    console.log("Creating practical and meaningful solutions...");
+                }
+
+                grow() {
+                    console.log("Taking on critical challenges to grow continuously");
+                }
+                }
+
+                const sulav = new SulavPaudel();
+                sulav.build();</code></pre>
             </div>
-            <div class="profile-section__pic-container">
-                <img src="./assets/about-section-img-1.png" alt="About me picture 1">
-                <img src="./assets/about-section-img-2.png" alt="About me picture 2">
+        </div>
+
+        <div id="communicator-content" class="about-side">
+            <div class="about-notebook">
+            <h2>Communicator Side</h2>
+            <p>
+                My journey into tech has always been fueled by communication. As a public speaker and debate trainer, I’ve come to value clarity, impact, and expression.
+            </p>
+            <p>
+                Whether I’m mentoring, leading a discussion, or presenting an idea, I rely on structure, empathy, and active listening to connect effectively.
+            </p>
+            <p>
+                I believe strong communication is just as important as writing clean, efficient code.
+            </p>
             </div>
+        </div>
         </div>
     </section>
+
+    <section id="experience">
     <h1 class="section_title">Experience</h1>
-    <section id = "experience">
-        <div id = "teaching">
-            <h1 class="section-heading">Teaching Experience</h1>
-            <div class="experience-container">
 
+    <div class="experience-toggle-buttons">
+        <button class="experience-toggle active" onclick="showExperienceTab('teaching')">Teaching</button>
+        <button class="experience-toggle" onclick="showExperienceTab('technical')">Technical</button>
+        <button class="experience-toggle" onclick="showExperienceTab('management')">Management</button>
+    </div>
 
-                <div class="card experience-card">
-                    <h1 class="experience-title">Mero Sikshya</h1>
-                    <img src="./assets/merosiksha.jpg" alt="merosiksha" class="experience-img">
-                    <h1 class="experience-title">Tutor</h1>
-                    <div class="date-container">
-                        <p class="experience-paragraph">Contract</p>
-                        <p class="experience-paragraph">Feb 2022 - Sep 2023</p>
-                    </div>
-                    <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
-                    <p class="experience-paragraph"> <span class="experience-paragraph-bold">Courses: </span>Mathematics (Calculus I II, Probability, Statistics, Mechanics)</p>
-                    <p class="experience-paragraph">Computer Science (Python, algorithms, data structures)</p>
-                    <p class="experience-paragraph">Physics (Particle Physics, Quantum Mechanics, Nuclear Physics).</p>
-                    <button class="learn-more" onclick="window.open('https://merosiksha.com/', '_blank')">Learn More</button>
-                </div>
+    <!-- Teaching Tab -->
+    <div id="experience-teaching" class="experience-tab active">
+        <div class="experience-container">
 
-
-                <div class="card experience-card">
-                    <h1 class="experience-title">Debate Network Nepal</h1>
-                    <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
-                    <h1 class="experience-title">Debate Trainer</h1>
-                    <div class="date-container">
-                        <p class="experience-paragraph">Freelance</p>
-                        <p class="experience-paragraph">Apr 2023 - Present</p>
-                    </div>
-                    <p class="experience-paragraph">Taught debate to 100+ students across 4+ schools</p>
-                    <p class="experience-paragraph"> <span class="experience-paragraph-bold">Courses: </span>Debate Format (WSDC, BP, AP)</p>
-                    <p class="experience-paragraph">Critical Thinking, Persuasion, Art of Argumentation</p>
-                    <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
-                </div>
-
-                <div class="card experience-card">
-                    <h1 class="experience-title">Incubate Nepal</h1>
-                    <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
-                    <h1 class="experience-title">Peer Mentor</h1>
-                    <div class="date-container">
-                        <p class="experience-paragraph">Seasonal</p>
-                        <p class="experience-paragraph">Jun 2023 - Aug 2023</p>
-                    </div>
-                    <p class="experience-paragraph">Mentored a group of 4 students on research methodologies, interview techniques, and project development.</p>
-                    <p class="experience-paragraph">Facilitated communication between mentees and the organizing committee to ensure smooth collaboration.</p>
-                    <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
-                </div>
-
+        <div class="card experience-card">
+            <h1 class="experience-title">Mero Sikshya</h1>
+            <img src="./assets/merosiksha.jpg" alt="merosiksha" class="experience-img">
+            <h1 class="experience-title">Tutor</h1>
+            <div class="date-container">
+            <p class="experience-paragraph">Contract</p>
+            <p class="experience-paragraph">Feb 2022 - Sep 2023</p>
             </div>
-        <div id = "management-technical">
-            <h1 class="section-heading">Technical Experience</h1>
-
-
-                <div class="experience-container">
-                    <div class="card experience-card">
-                        <h1 class="experience-title">Debate Network Nepal</h1>
-                        <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
-                        <h1 class="experience-title">IT Officer</h1>
-                        <div class="date-container">
-                            <p class="experience-paragraph">Full Time</p>
-                            <p class="experience-paragraph">Dec 2022 - Jan 2023</p>
-                        </div>
-                        <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
-                        <p class="experience-paragraph">Managed the company website with admin privilege updates.</p>
-                        <p class="experience-paragraph">Handled the Social media platforms including designing and creating original posts.</p>
-                        <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
-                    </div>
-
-
-                    <div class="card experience-card">
-                        <h1 class="experience-title">Incubate Nepal</h1>
-                        <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
-                        <h1 class="experience-title">Student Researcher</h1>
-                        <div class="date-container">
-                            <p class="experience-paragraph">Seasonal</p>
-                            <p class="experience-paragraph">Aug 2022 - Nov 2022</p>
-                        </div>
-                        <p class="experience-paragraph">Led research and development, built the database, designed the user interface, and implemented the interactive map.</p>
-                        <p class="experience-paragraph">Focused on identifying overlooked heritage sites and using technology to support cultural preservation.</p>
-                        <p class="experience-paragraph"> <span class="experience-paragraph-bold">Project: </span>Samrakshana</p>
-                        <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
-                    </div>
-
-
-                    <div class="card experience-card">
-                        <h1 class="experience-title">Debate Network Nepal</h1>
-                        <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
-                        <h1 class="experience-title">Deputy Head of Operations</h1>
-                        <div class="date-container">
-                            <p class="experience-paragraph">Full Time</p>
-                            <p class="experience-paragraph">Jan 2023 - Apr 2023</p>
-                        </div>
-                        <p class="experience-paragraph">Organized and managed large-scale debate tournaments</p>
-                        <p class="experience-paragraph">Handled logistics, scheduling, and sponsorship outreach</p>
-                        <p class="experience-paragraph">Built partnerships for community sustainability</p>
-                        <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
-                    </div>
+            <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
+            <p class="experience-paragraph"> <span class="experience-paragraph-bold">Courses: </span>Mathematics (Calculus I II, Probability, Statistics, Mechanics)</p>
+            <p class="experience-paragraph">Computer Science (Python, algorithms, data structures)</p>
+            <p class="experience-paragraph">Physics (Particle Physics, Quantum Mechanics, Nuclear Physics).</p>
+            <button class="learn-more" onclick="window.open('https://merosiksha.com/', '_blank')">Learn More</button>
         </div>
+
+        <div class="card experience-card">
+            <h1 class="experience-title">Debate Network Nepal</h1>
+            <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+            <h1 class="experience-title">Debate Trainer</h1>
+            <div class="date-container">
+            <p class="experience-paragraph">Freelance</p>
+            <p class="experience-paragraph">Apr 2023 - Present</p>
+            </div>
+            <p class="experience-paragraph">Taught debate to 100+ students across 4+ schools</p>
+            <p class="experience-paragraph"> <span class="experience-paragraph-bold">Courses: </span>Debate Format (WSDC, BP, AP)</p>
+            <p class="experience-paragraph">Critical Thinking, Persuasion, Art of Argumentation</p>
+            <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+        </div>
+
+        <div class="card experience-card">
+            <h1 class="experience-title">Incubate Nepal</h1>
+            <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
+            <h1 class="experience-title">Peer Mentor</h1>
+            <div class="date-container">
+            <p class="experience-paragraph">Seasonal</p>
+            <p class="experience-paragraph">Jun 2023 - Aug 2023</p>
+            </div>
+            <p class="experience-paragraph">Mentored a group of 4 students on research methodologies, interview techniques, and project development.</p>
+            <p class="experience-paragraph">Facilitated communication between mentees and the organizing committee to ensure smooth collaboration.</p>
+            <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Technical Tab -->
+    <div id="experience-technical" class="experience-tab">
+        <div class="experience-container">
+
+        <div class="card experience-card">
+            <h1 class="experience-title">Debate Network Nepal</h1>
+            <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+            <h1 class="experience-title">IT Officer</h1>
+            <div class="date-container">
+            <p class="experience-paragraph">Full Time</p>
+            <p class="experience-paragraph">Dec 2022 - Jan 2023</p>
+            </div>
+            <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
+            <p class="experience-paragraph">Managed the company website with admin privilege updates.</p>
+            <p class="experience-paragraph">Handled the Social media platforms including designing and creating original posts.</p>
+            <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+        </div>
+
+        <div class="card experience-card">
+            <h1 class="experience-title">Incubate Nepal</h1>
+            <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
+            <h1 class="experience-title">Student Researcher</h1>
+            <div class="date-container">
+            <p class="experience-paragraph">Seasonal</p>
+            <p class="experience-paragraph">Aug 2022 - Nov 2022</p>
+            </div>
+            <p class="experience-paragraph">Led research and development, built the database, designed the user interface, and implemented the interactive map.</p>
+            <p class="experience-paragraph">Focused on identifying overlooked heritage sites and using technology to support cultural preservation.</p>
+            <p class="experience-paragraph"> <span class="experience-paragraph-bold">Project: </span>Samrakshana</p>
+            <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Management Tab -->
+    <div id="experience-management" class="experience-tab">
+        <div class="experience-container">
+        <div class="card experience-card">
+            <h1 class="experience-title">Debate Network Nepal</h1>
+            <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+            <h1 class="experience-title">Deputy Head of Operations</h1>
+            <div class="date-container">
+            <p class="experience-paragraph">Full Time</p>
+            <p class="experience-paragraph">Jan 2023 - Apr 2023</p>
+            </div>
+            <p class="experience-paragraph">Organized and managed large-scale debate tournaments</p>
+            <p class="experience-paragraph">Handled logistics, scheduling, and sponsorship outreach</p>
+            <p class="experience-paragraph">Built partnerships for community sustainability</p>
+            <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+        </div>
+        </div>
+    </div>
     </section>
     <section id="skills">
         <h1 class="section_title">Skills</h1>
