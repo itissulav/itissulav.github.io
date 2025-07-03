@@ -23,3 +23,22 @@ function showExperienceTab(tab) {
     buttons.forEach(btn => btn.classList.remove('active'));
     document.querySelector(`.experience-toggle[onclick*="${tab}"]`).classList.add('active');
 }
+
+const toggle = document.getElementById('darkModeToggle');
+
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    // Add dark mode stylesheet
+    if (!document.getElementById('dark-mode-style')) {
+      const darkModeLink = document.createElement('link');
+      darkModeLink.rel = 'stylesheet';
+      darkModeLink.href = 'darkMode.css'; // Your dark mode CSS file path
+      darkModeLink.id = 'dark-mode-style';
+      document.head.appendChild(darkModeLink);
+    }
+  } else {
+    // Remove dark mode stylesheet
+    const darkModeLink = document.getElementById('dark-mode-style');
+    if (darkModeLink) darkModeLink.remove();
+  }
+});
