@@ -737,3 +737,8 @@ input:checked + .slider::before {
 .switch:hover .slider {
   box-shadow: 0 0 8px #aaa;
 }
+
+.project-button-container{
+    display: flex;
+    justify-content: space-between;
+}

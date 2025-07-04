@@ -236,6 +236,14 @@ section{
     gap: 3%;
 }
 
+button{
+    cursor: pointer;
+}
+button:active{
+    transform: scale(0.9);
+    transition: 200ms ease-in-out;
+}
+
 .linkedin{
     width: 60%;
     background: black;
@@ -620,5 +628,10 @@ input:checked + .slider::before {
 /* Optional: add a subtle glow on hover */
 .switch:hover .slider {
   box-shadow: 0 0 8px #aaa;
+}
+
+.project-button-container{
+    display: flex;
+    justify-content: space-between;
 }
 
