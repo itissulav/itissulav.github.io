@@ -6,25 +6,26 @@
     <title>Sulav Paudel</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="lightMode.css" id="mode">
-    <link rel="stylesheet" href="mediaquries.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V7HJPPF9YG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V7HJPPF9YG');
-</script>
 <body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V7HJPPF9YG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-V7HJPPF9YG');
+    </script>
+
     <nav id="desktop-nav">
         <div class="logo">Sulav Paudel</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#project">Project</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
@@ -32,13 +33,12 @@
                         <input type="checkbox" id="darkModeToggle" />
                         <span class="slider"></span>
                     </label>
-
                 </li>
             </ul>
         </div>
     </nav>
 
-    <nav id = "hamburger-nav">
+    <nav id="hamburger-nav">
         <div class="logo">Sulav Paudel</div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
@@ -50,257 +50,246 @@
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li>
+                    <label class="switch mobile-switch">
+                        <input type="checkbox" id="darkModeToggleMobile" />
+                        <span class="slider"></span>
+                    </label>
+                </li>
             </div>
         </div>
     </nav>
 
-    <section id = "profile" class="profile-section">
+    <section id="profile" class="profile-section section-padding">
         <div class="profile-container">
+            <div class="section__pic-container">
+                <img src="./assets/SulavPaudel.jpeg" alt="Sulav Paudel profile picture">
+            </div>
             <div class="section__text">
                 <p class="section__text__p1">Hi!</p>
-                <h1 class="title"> I AM SULAV PAUDEL</h1>
+                <h1 class="title">I AM SULAV PAUDEL</h1>
                 <p class="section__text__p2">CS Undergrad, Developer, Teacher</p>
-                <p class = "short-bio"> I'm a Computer Science undergraduate who loves solving real-world problems through code. From mentoring peers to building creative, efficient projects, I enjoy taking on diverse roles. With a strong background in public speaking and debate, I value clarity, impact, and continuous growth.</p>
+                <p class="short-bio">I'm a Computer Science undergraduate who loves solving real-world problems through code. From mentoring peers to building creative, efficient projects, I enjoy taking on diverse roles. With a strong background in public speaking and debate, I value clarity, impact, and continuous growth.</p>
                 <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('./assets/Sulav Paudel CV.pdf')"> Download CV</button>
-                    <button class="btn btn-color-1" onclick="location.href = './#contact'"> Contact Info</button>
+                    <button class="btn btn-secondary" onclick="window.open('./assets/Sulav Paudel CV.pdf')">Download CV</button>
+                    <button class="btn btn-primary" onclick="location.href = './#contact'">Contact Info</button>
                 </div>
-                <div id = 'socials-container'>
-                    <button class="linkedin" onclick="window.open('https://www.linkedin.com/in/itissulav/', '_blank')">Linkedin</button>
-                    <button class="github" onclick="window.open('https://github.com/itissulav', '_blank')">GitHub</button>
+                <div id="socials-container">
+                    <button class="social-btn" onclick="window.open('https://www.linkedin.com/in/itissulav/', '_blank')">Linkedin</button>
+                    <button class="social-btn" onclick="window.open('https://github.com/itissulav', '_blank')">GitHub</button>
                 </div>
-            </div>
-            <div class="section__pic-container">
-                <img src="./assets/SulavPaudel.png" alt=" Sulav Paudel profile picture">
             </div>
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="section-padding">
         <h1 class="section_title">About Me</h1>
         <div class="about-toggle-buttons">
-        <button class="about-toggle active" onclick="toggleAbout('developer')">Developer Side</button>
-        <button class="about-toggle" onclick="toggleAbout('communicator')">Communicator Side</button>
+            <button class="about-toggle active" onclick="toggleAbout('developer')">Developer</button>
+            <button class="about-toggle" onclick="toggleAbout('communicator')">Communicator</button>
         </div>
 
         <div class="about-split-container">
-        <div id="developer-content" class="about-side active">
-            <div class="about-code-editor">
-                <pre><code>// Developer Side
-                class SulavPaudel {
-                constructor() {
-                    this.role = "CS Undergraduate";
-                    this.interests = ["Problem Solving", "Real-World Applications", "Projects"];
-                }
+            <div id="developer-content" class="about-side active">
+                <div class="about-code-editor">
+                    <pre><code>// Developer Side
+class SulavPaudel {
+    constructor() {
+        this.role = "CS Undergraduate";
+        this.interests = ["Problem Solving", "Real-World Applications", "Projects"];
+    }
 
-                build() {
-                    console.log("Creating practical and meaningful solutions...");
-                }
+    build() {
+        console.log("Creating practical and meaningful solutions...");
+    }
 
-                grow() {
-                    console.log("Taking on critical challenges to grow continuously");
-                }
-                }
+    grow() {
+        console.log("Taking on critical challenges to grow continuously");
+    }
+}
 
-                const sulav = new SulavPaudel();
-                sulav.build();</code></pre>
+const sulav = new SulavPaudel();
+sulav.build();</code></pre>
+                </div>
             </div>
-        </div>
 
-        <div id="communicator-content" class="about-side">
-            <div class="about-notebook">
-            <h2>Communicator Side</h2>
-            <p>
-                My journey into tech has always been fueled by communication. As a public speaker and debate trainer, I’ve come to value clarity, impact, and expression.
-            </p>
-            <p>
-                Whether I’m mentoring, leading a discussion, or presenting an idea, I rely on structure, empathy, and active listening to connect effectively.
-            </p>
-            <p>
-                I believe strong communication is just as important as writing clean, efficient code.
-            </p>
+            <div id="communicator-content" class="about-side">
+                <div class="about-notebook">
+                    <h2>Communicator Side</h2>
+                    <p>
+                        My journey into tech has always been fueled by communication. As a public speaker and debate trainer, I’ve come to value clarity, impact, and expression.
+                    </p>
+                    <p>
+                        Whether I’m mentoring, leading a discussion, or presenting an idea, I rely on structure, empathy, and active listening to connect effectively.
+                    </p>
+                    <p>
+                        I believe strong communication is just as important as writing clean, efficient code.
+                    </p>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
-    <section id="experience">
-    <h1 class="section_title">Experience</h1>
+    <section id="experience" class="section-padding">
+        <h1 class="section_title">Experience</h1>
 
-    <div class="experience-toggle-buttons">
-        <button class="experience-toggle active" onclick="showExperienceTab('teaching')">Teaching</button>
-        <button class="experience-toggle" onclick="showExperienceTab('technical')">Technical</button>
-        <button class="experience-toggle" onclick="showExperienceTab('management')">Management</button>
-    </div>
+        <div class="experience-toggle-buttons">
+            <button class="experience-toggle active" onclick="showExperienceTab('teaching')">Teaching</button>
+            <button class="experience-toggle" onclick="showExperienceTab('technical')">Technical</button>
+            <button class="experience-toggle" onclick="showExperienceTab('management')">Management</button>
+        </div>
 
-    <!-- Teaching Tab -->
-    <div id="experience-teaching" class="experience-tab active">
-        <div class="experience-container">
+        <div id="experience-teaching" class="experience-tab active">
+            <div class="experience-container">
+                <div class="card experience-card">
+                    <h1 class="experience-title">Mero Sikshya</h1>
+                    <img src="./assets/merosiksha.jpg" alt="merosiksha" class="experience-img">
+                    <h1 class="experience-role">Tutor</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Contract</p>
+                        <p class="experience-paragraph">Feb 2022 - Sep 2023</p>
+                    </div>
+                    <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
+                    <p class="experience-paragraph"><span class="experience-paragraph-bold">Courses:</span> Mathematics (Calculus I II, Probability, Statistics, Mechanics)</p>
+                    <p class="experience-paragraph">Computer Science (Python, algorithms, data structures)</p>
+                    <p class="experience-paragraph">Physics (Particle Physics, Quantum Mechanics, Nuclear Physics).</p>
+                    <button class="learn-more" onclick="window.open('https://merosiksha.com/', '_blank')">Learn More</button>
+                </div>
 
-        <div class="card experience-card">
-            <h1 class="experience-title">Mero Sikshya</h1>
-            <img src="./assets/merosiksha.jpg" alt="merosiksha" class="experience-img">
-            <h1 class="experience-title">Tutor</h1>
-            <div class="date-container">
-            <p class="experience-paragraph">Contract</p>
-            <p class="experience-paragraph">Feb 2022 - Sep 2023</p>
+                <div class="card experience-card">
+                    <h1 class="experience-title">Debate Network Nepal</h1>
+                    <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+                    <h1 class="experience-role">Debate Trainer</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Freelance</p>
+                        <p class="experience-paragraph">Apr 2023 - Present</p>
+                    </div>
+                    <p class="experience-paragraph">Taught debate to 100+ students across 4+ schools</p>
+                    <p class="experience-paragraph"><span class="experience-paragraph-bold">Courses:</span> Debate Format (WSDC, BP, AP)</p>
+                    <p class="experience-paragraph">Critical Thinking, Persuasion, Art of Argumentation</p>
+                    <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+                </div>
+
+                <div class="card experience-card">
+                    <h1 class="experience-title">Incubate Nepal</h1>
+                    <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
+                    <h1 class="experience-role">Peer Mentor</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Seasonal</p>
+                        <p class="experience-paragraph">Jun 2023 - Aug 2023</p>
+                    </div>
+                    <p class="experience-paragraph">Mentored a group of 4 students on research methodologies, interview techniques, and project development.</p>
+                    <p class="experience-paragraph">Facilitated communication between mentees and the organizing committee to ensure smooth collaboration.</p>
+                    <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
+                </div>
             </div>
-            <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
-            <p class="experience-paragraph"> <span class="experience-paragraph-bold">Courses: </span>Mathematics (Calculus I II, Probability, Statistics, Mechanics)</p>
-            <p class="experience-paragraph">Computer Science (Python, algorithms, data structures)</p>
-            <p class="experience-paragraph">Physics (Particle Physics, Quantum Mechanics, Nuclear Physics).</p>
-            <button class="learn-more" onclick="window.open('https://merosiksha.com/', '_blank')">Learn More</button>
         </div>
 
-        <div class="card experience-card">
-            <h1 class="experience-title">Debate Network Nepal</h1>
-            <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
-            <h1 class="experience-title">Debate Trainer</h1>
-            <div class="date-container">
-            <p class="experience-paragraph">Freelance</p>
-            <p class="experience-paragraph">Apr 2023 - Present</p>
+        <div id="experience-technical" class="experience-tab">
+            <div class="experience-container">
+                <div class="card experience-card">
+                    <h1 class="experience-title">Debate Network Nepal</h1>
+                    <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+                    <h1 class="experience-role">IT Officer</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Full Time</p>
+                        <p class="experience-paragraph">Dec 2022 - Jan 2023</p>
+                    </div>
+                    <p class="experience-paragraph">Managed the company website with admin privilege updates.</p>
+                    <p class="experience-paragraph">Handled the Social media platforms including designing and creating original posts.</p>
+                    <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+                </div>
+
+                <div class="card experience-card">
+                    <h1 class="experience-title">Incubate Nepal</h1>
+                    <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
+                    <h1 class="experience-role">Student Researcher</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Seasonal</p>
+                        <p class="experience-paragraph">Aug 2022 - Nov 2022</p>
+                    </div>
+                    <p class="experience-paragraph">Led research and development, built the database, designed the user interface, and implemented the interactive map.</p>
+                    <p class="experience-paragraph">Focused on identifying overlooked heritage sites and using technology to support cultural preservation.</p>
+                    <p class="experience-paragraph"><span class="experience-paragraph-bold">Project:</span> Samrakshana</p>
+                    <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
+                </div>
             </div>
-            <p class="experience-paragraph">Taught debate to 100+ students across 4+ schools</p>
-            <p class="experience-paragraph"> <span class="experience-paragraph-bold">Courses: </span>Debate Format (WSDC, BP, AP)</p>
-            <p class="experience-paragraph">Critical Thinking, Persuasion, Art of Argumentation</p>
-            <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
         </div>
 
-        <div class="card experience-card">
-            <h1 class="experience-title">Incubate Nepal</h1>
-            <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
-            <h1 class="experience-title">Peer Mentor</h1>
-            <div class="date-container">
-            <p class="experience-paragraph">Seasonal</p>
-            <p class="experience-paragraph">Jun 2023 - Aug 2023</p>
+        <div id="experience-management" class="experience-tab">
+            <div class="experience-container">
+                <div class="card experience-card">
+                    <h1 class="experience-title">Debate Network Nepal</h1>
+                    <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
+                    <h1 class="experience-role">Deputy Head of Operations</h1>
+                    <div class="date-container">
+                        <p class="experience-paragraph">Full Time</p>
+                        <p class="experience-paragraph">Jan 2023 - Apr 2023</p>
+                    </div>
+                    <p class="experience-paragraph">Organized and managed large-scale debate tournaments</p>
+                    <p class="experience-paragraph">Handled logistics, scheduling, and sponsorship outreach</p>
+                    <p class="experience-paragraph">Built partnerships for community sustainability</p>
+                    <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
+                </div>
             </div>
-            <p class="experience-paragraph">Mentored a group of 4 students on research methodologies, interview techniques, and project development.</p>
-            <p class="experience-paragraph">Facilitated communication between mentees and the organizing committee to ensure smooth collaboration.</p>
-            <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
         </div>
-
-        </div>
-    </div>
-
-    <!-- Technical Tab -->
-    <div id="experience-technical" class="experience-tab">
-        <div class="experience-container">
-
-        <div class="card experience-card">
-            <h1 class="experience-title">Debate Network Nepal</h1>
-            <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
-            <h1 class="experience-title">IT Officer</h1>
-            <div class="date-container">
-            <p class="experience-paragraph">Full Time</p>
-            <p class="experience-paragraph">Dec 2022 - Jan 2023</p>
-            </div>
-            <p class="experience-paragraph">Tutored A-Level, Grade 5 and above students.</p>
-            <p class="experience-paragraph">Managed the company website with admin privilege updates.</p>
-            <p class="experience-paragraph">Handled the Social media platforms including designing and creating original posts.</p>
-            <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
-        </div>
-
-        <div class="card experience-card">
-            <h1 class="experience-title">Incubate Nepal</h1>
-            <img src="./assets/incubatenepal.png" alt="incubatenepal" class="experience-img">
-            <h1 class="experience-title">Student Researcher</h1>
-            <div class="date-container">
-            <p class="experience-paragraph">Seasonal</p>
-            <p class="experience-paragraph">Aug 2022 - Nov 2022</p>
-            </div>
-            <p class="experience-paragraph">Led research and development, built the database, designed the user interface, and implemented the interactive map.</p>
-            <p class="experience-paragraph">Focused on identifying overlooked heritage sites and using technology to support cultural preservation.</p>
-            <p class="experience-paragraph"> <span class="experience-paragraph-bold">Project: </span>Samrakshana</p>
-            <button class="learn-more" onclick="window.open('https://www.incubatenepal.com/', '_blank')">Learn More</button>
-        </div>
-
-        </div>
-    </div>
-
-    <!-- Management Tab -->
-    <div id="experience-management" class="experience-tab">
-        <div class="experience-container">
-        <div class="card experience-card">
-            <h1 class="experience-title">Debate Network Nepal</h1>
-            <img src="./assets/debatenetworknepal.png" alt="debatenetworknepal" class="experience-img">
-            <h1 class="experience-title">Deputy Head of Operations</h1>
-            <div class="date-container">
-            <p class="experience-paragraph">Full Time</p>
-            <p class="experience-paragraph">Jan 2023 - Apr 2023</p>
-            </div>
-            <p class="experience-paragraph">Organized and managed large-scale debate tournaments</p>
-            <p class="experience-paragraph">Handled logistics, scheduling, and sponsorship outreach</p>
-            <p class="experience-paragraph">Built partnerships for community sustainability</p>
-            <button class="learn-more" onclick="window.open('https://debate.net.np/', '_blank')">Learn More</button>
-        </div>
-        </div>
-    </div>
     </section>
-    <section id="skills">
+
+    <section id="skills" class="section-padding">
         <h1 class="section_title">Skills</h1>
         <div class="skill-container">
-
-
             <div class="skill-card">
                 <img src="./assets/python.webp" alt="python">
                 <h1 class="skill-title">Python</h1>
             </div>
-
             <div class="skill-card">
                 <img src="./assets/java.webp" alt="java">
                 <h1 class="skill-title">Java</h1>
             </div>
-
             <div class="skill-card">
                 <img src="./assets/webdevelopment.png" alt="HTML/CSS">
                 <h1 class="skill-title">HTML/CSS</h1>
             </div>
-
             <div class="skill-card">
                 <img src="./assets/statistics.png" alt="statistics">
                 <h1 class="skill-title">Statistics</h1>
             </div>
-
             <div class="skill-card">
                 <img src="./assets/pandas.png" alt="pandas">
                 <h1 class="skill-title">Pandas</h1>
             </div>
-
             <div class="skill-card">
                 <img src="./assets/nlp.png" alt="nlp">
                 <h1 class="skill-title">NLP/NLTK</h1>
             </div>
-
-
         </div>
     </section>
 
-    <section id = 'project'>
-        <p class = "project-title"> Browse my Recent</p>
-        <p class="section_title">Projects</p>
+    <section id="project" class="section-padding">
+        <p class="project-subtitle">Browse my Recent</p>
+        <h1 class="section_title">Projects</h1>
 
         <div class="project-container">
-
             <div class="card project-card">
-                <p class="experience-title">Shaadi Mitra</p>
+                <p class="project-card-title">Shaadi Mitra</p>
                 <img src="./assets/shaadimitra.png" alt="shaadimitra" class="project-img">
-                <p class="experience-paragraph">Shaadi Mitra is a college project: a modern matchmaking web app</p>
-                <p class="experience-paragraph">Combines traditional matchmaking with a swipe-based UI.</p>
-                <p class="experience-paragraph">Built with a clean frontend and structured backend.</p>
-
-                <p class="experience-paragraph"> <span class="experience-paragraph-bold">Tools: </span> HTML, CSS, JAVA, mySQL, JSP, Eclipse, RESTAPI</p>
-                <button class="learn-more" onclick="window.open('https://github.com/itissulav/Shaadi-Mitra', '_blank')">Learn More</button>
+                <p class="project-paragraph">Shaadi Mitra is a college project: a modern matchmaking web app.</p>
+                <p class="project-paragraph">Combines traditional matchmaking with a swipe-based UI.</p>
+                <p class="project-paragraph">Built with a clean frontend and structured backend.</p>
+                <p class="project-paragraph"><span class="project-paragraph-bold">Tools:</span> HTML, CSS, JAVA, mySQL, JSP, Eclipse, RESTAPI</p>
+                <div class="project-button-container">
+                    <button class="learn-more" onclick="window.open('https://github.com/itissulav/Shaadi-Mitra', '_blank')">GitHub</button>
+                </div>
             </div>
 
             <div class="card project-card">
-                <p class="experience-title">Youtube ReCapQuiz</p>
-                <img src="./assets/YouTube Recap Quiz.png" alt="Samrakshana" class="project-img">
-                <p class="experience-paragraph-bold">Responsibilities</p>
-                <p class="experience-paragraph">Generate intelligent quizzes from YouTube videos using AI. This Chrome Extension — powered by Gemini 2.5.</p>
-                <p class="experience-paragraph">Detects what you’ve watched and creates contextual quiz questions based on captions and timestamps</p>
-                <p class="experience-paragraph"> <span class="experience-paragraph-bold">Tools: </span> FastAPI, Gemini 2.5 Flash, JavaScript, Html/Css</p>
-                <p class="experience-paragraph"> <span class="experience-paragraph-bold">View on</p>
+                <p class="project-card-title">Youtube ReCapQuiz</p>
+                <img src="./assets/YouTube Recap Quiz.png" alt="YouTube Recap Quiz" class="project-img">
+                <p class="project-paragraph">Generate intelligent quizzes from YouTube videos using AI. This Chrome Extension — powered by Gemini 2.5.</p>
+                <p class="project-paragraph">Detects what you’ve watched and creates contextual quiz questions based on captions and timestamps.</p>
+                <p class="project-paragraph"><span class="project-paragraph-bold">Tools:</span> FastAPI, Gemini 2.5 Flash, JavaScript, HTML/CSS</p>
                 <div class="project-button-container">
                     <button class="learn-more" onclick="window.open('https://chromewebstore.google.com/detail/jaakocmgbfikoolmeeiiinneohciddpo?utm_source=item-share-cb', '_blank')">Webstore</button>
                     <button class="learn-more" onclick="window.open('https://github.com/itissulav/Youtube-RecapQuiz', '_blank')">GitHub</button>
@@ -308,20 +297,31 @@
             </div>
 
             <div class="card project-card">
-                <p class="experience-title">Real-Time Emotion Music Bot</p>
-                <img src="./assets/realtimemusicbot.png" alt="shaadimitra" class="project-img">
-                <p class="experience-paragraph">An AI-powered Python app that detects user emotions from text, extracts context keywords, and recommends songs by integrating Genius and Spotify APIs.</p>
-                <p class="experience-paragraph">Trained a model using 300,000 data fo Natural Language Processing.</p>
-
-                <p class="experience-paragraph"> <span class="experience-paragraph-bold">Tools: </span> Transformers, keyBERT, NLTK, SpotifyAPI, Spotipy, scikit-learn</p>
-                <button class="learn-more" onclick="window.open('https://github.com/itissulav/Real-Time-Emotion-Music-Bot', '_blank')">Learn More</button>
+                <p class="project-card-title">Kharcha</p>
+                <img src="./assets/Kharcha.png" alt="Finance Tracker App Screenshots" class="project-img">
+                <p class="project-paragraph">A privacy-first personal finance tracker built with React Native and Expo. Log and analyze your expenses from cash, bank, eSewa, and Khalti.</p>
+                <p class="project-paragraph">It offers multi-source tracking and insightful graphical reports, keeping all your data securely offline and private.</p>
+                <p class="project-paragraph"><span class="project-paragraph-bold">Tools:</span> React Native + Expo, TypeScript + NativeWind, SQLite</p>
+                <div class="project-button-container">
+                    <button class="learn-more" onclick="window.open('https://github.com/itissulav/Financial-Tracker-App', '_blank')">GitHub</button>
+                </div>
             </div>
 
+            <div class="card project-card">
+                <p class="project-card-title">Real-Time Emotion Music Bot</p>
+                <img src="./assets/realtimemusicbot.png" alt="Real-Time Emotion Music Bot" class="project-img">
+                <p class="project-paragraph">An AI-powered Python app that detects user emotions from text, extracts context keywords, and recommends songs by integrating Genius and Spotify APIs.</p>
+                <p class="project-paragraph">Trained a model using 300,000 data for Natural Language Processing.</p>
+                <p class="project-paragraph"><span class="project-paragraph-bold">Tools:</span> Transformers, keyBERT, NLTK, SpotifyAPI, Spotipy, scikit-learn</p>
+                <div class="project-button-container">
+                    <button class="learn-more" onclick="window.open('https://github.com/itissulav/Real-Time-Emotion-Music-Bot', '_blank')">GitHub</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <p class="section_title">Contact me</p>
+    <section id="contact" class="section-padding">
+        <h1 class="section_title">Contact me</h1>
         <div class="contact-container">
             <div class="contact_card">
                 <img src="./assets/email.jpg" alt="email" class="icon contact-icon">
@@ -332,14 +332,17 @@
                 <img src="./assets/linkedin icon.webp" alt="linkedin" class="icon contact-icon">
                 <p><a href="https://www.linkedin.com/in/itissulav/">itissulav</a></p>
             </div>
-            
+
             <div class="contact_card">
                 <img src="./assets/call icon.png" alt="call" class="icon contact-icon">
                 <p>+977 9849000056</p>
             </div>
-
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Sulav Paudel. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
